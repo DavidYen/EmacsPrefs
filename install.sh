@@ -11,4 +11,4 @@ cat ~/.emacs.bak | grep -v EmacsPrefs >> ~/.emacs
 echo \;\; EmacsPrefs >> ~/.emacs
 echo \(add-to-list \'load-path \"${DIR}/emacs/\"\) \;\; EmacsPrefs >> ~/.emacs 
 echo \(load-library \"base\"\) \;\; EmacsPrefs >> ~/.emacs
-echo \(load_emacs_refs\) \;\; EmacsPrefs >> ~/.emacs
+echo \(load_emacs_prefs\) \;\; EmacsPrefs >> ~/.emacs
