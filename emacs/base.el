@@ -1,5 +1,14 @@
 ;; By David Yen, Simply loads emacs preferences.
 (defun load_emacs_prefs ()
+  ;; Backup settings
+  (setq
+     backup-by-copying t
+     backup-directory-alist '(("." . "~/.emacs_backups"))
+     delete-old-versions t
+     kept-new-versions 6
+     kept-old-versions 2
+     version-control t)
+
   ;; Spaces instead of tabs
   (setq-default indent-tabs-mode nil)
 
@@ -23,7 +32,5 @@
   ;; Highlight all occurances of words
   (require 'highlight-symbol)
   (add-hook 'after-change-major-mode-hook 'highlight-symbol-mode)
-  (setq-default highlight-symbol-idle-delay 0.5))
-
-
-
+  (setq-default highlight-symbol-idle-delay 0.5)
+)
